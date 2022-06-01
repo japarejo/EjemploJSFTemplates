@@ -7,10 +7,11 @@
  <version>0.0.1-SNAPSHOT</version>
  <name>Ejemplo JSF Templates</name>
  <url>http://maven.apache.org</url>
- <properties>
-        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+ <properties>        
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jsf2.version>2.2.10</jsf2.version>
+        <maven.compiler.source>13</maven.compiler.source>
+        <maven.compiler.target>13</maven.compiler.target >
     </properties>
     
     <dependencies>
@@ -31,30 +32,4 @@
 			<version>${jsf2.version}</version>
 		</dependency>         
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                    <compilerArguments>
-                        <endorseddirs>${endorsed.dir}</endorseddirs>
-                    </compilerArguments>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.3</version>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
- 			</plugins>
-  <finalName>jsftemplate</finalName>
- </build>
 </project>
